@@ -1,0 +1,11 @@
+version: '3.4'
+
+services:
+  server:
+    image: karen-decoder-server:1.0
+    container_name: karen-decoder-server
+    build:
+      context: .
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
